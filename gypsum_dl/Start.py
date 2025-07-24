@@ -211,7 +211,7 @@ def prepare_molecules(args):
 
     # Make the output directory if necessary.
     if os.path.exists(params["output_folder"]) == False:
-        os.mkdir(params["output_folder"])
+        os.mkdir(params["output_folder"], exist_ok=True)
         if os.path.exists(params["output_folder"]) == False:
             Utils.exception("Output folder directory couldn't be found or created.")
 
